@@ -1,4 +1,4 @@
-public class Friends{//вложенные классы
+public class Friends {//вложенные классы
     String name;
     public Friends(String name){
         this.name = name;

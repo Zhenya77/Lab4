@@ -52,7 +52,7 @@ public abstract class Place {
         Place.locationWithCharacters = charLocation;
     }
 
-    protected static void loadLocation() {
+    protected static void loadLocation() throws MismatchCoordinates{
         String location;
         location = "y  _____________________________________________________\n";
         location += "1 |                                                    |\n";
@@ -68,15 +68,17 @@ public abstract class Place {
         location += "    1     6       16 18   24   28 31           44 46 50 x";
         char[] elems = location.toCharArray();
         int z = 0;
-        for (int i = 0; i < 12; i++)
-            for (int j = 0; j < 57; j++) {
-                if (z < 12 * 57) {
-                    locationWithCharacters[i][j] = elems[z];
-                    emptyLocation[i][j] = elems[z];
-                    z++;
+
+            for (int i = 0; i < 12; i++)
+                for (int j = 0; j < 57; j++) {
+                    if (z < 12 * 57) {
+                        locationWithCharacters[i][j] = elems[z];
+                        emptyLocation[i][j] = elems[z];
+                        z++;
+                    }
                 }
-            }
-        System.out.println("Загружена локация:\n" + location);
+            System.out.println("Загружена локация:\n" + location);
+
     }
 
     protected static void printLocationWithCharacters() {

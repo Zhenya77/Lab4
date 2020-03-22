@@ -1,5 +1,4 @@
-public
-class Characters extends Entity implements Moveable {
+public class Characters extends Entity implements Moveable {
     int x;
     int y;
     char symbol;
