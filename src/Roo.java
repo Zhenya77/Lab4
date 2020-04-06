@@ -1,5 +1,5 @@
 public class Roo extends Characters{
-        public Roo(String name, int x, int y, char symbol) throws NoNameException, MismatchCoordinates {
+        public Roo(String name, int x, int y, char symbol) throws NoNameException {
             super(name, x, y, symbol);
         }
         public void practiceJumping() throws MismatchCoordinates {

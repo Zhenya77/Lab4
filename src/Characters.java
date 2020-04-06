@@ -3,7 +3,7 @@ public class Characters extends Entity implements Moveable {
     int y;
     char symbol;
 
-    public Characters(String name, int x, int y, char symbol) throws NoNameException, MismatchCoordinates {
+    public Characters(String name, int x, int y, char symbol) throws NoNameException {
         super(name);
         this.x = x;
         this.y = y;
@@ -50,13 +50,13 @@ public class Characters extends Entity implements Moveable {
         this.symbol = symbol;
     }
 
-    public boolean checkLocation(int x, int y, boolean tumb) throws MismatchCoordinates {
+    public boolean checkLocation(int x, int y, boolean tumb) {
         if (((1 <= x && x <= 6) || (46<= x && x <=50)) && y==7 ) return true;
         else if (((16 <= x && x <= 18) || (24<= x && x <=28)) && y==6 ) return true;
         else if (31 <= x && x <= 44 && y==8 ) return true;
         else {
             if (tumb){return false;}
-            else throw new MismatchCoordinates ("Неподходящие координаты");
+            else throw new MismatchCoordinates();
         }
     }
 
@@ -79,7 +79,7 @@ public class Characters extends Entity implements Moveable {
             this.setLocation(tumb);
         }
     }
-    public void moveToPlace(Place place) throws MismatchCoordinates {
+    public void moveToPlace(Place place) {
         int newX=0;
         int newY = place.coords.getY();
         int n = place.coords.getX2()-place.coords.getX1();

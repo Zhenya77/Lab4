@@ -1,7 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
-import javax.xml.stream.Location;
-
 public abstract class Place {
     String name;
     CoordsOfPlaces coords;
@@ -52,7 +48,7 @@ public abstract class Place {
         Place.locationWithCharacters = charLocation;
     }
 
-    protected static void loadLocation() throws MismatchCoordinates{
+    protected static void loadLocation() {
         String location;
         location = "y  _____________________________________________________\n";
         location += "1 |                                                    |\n";

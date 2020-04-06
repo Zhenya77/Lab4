@@ -1,5 +1,5 @@
 public class Kenga extends Characters {
-    public Kenga(String name, int x, int y, char symbol) throws NoNameException, MismatchCoordinates {
+    public Kenga(String name, int x, int y, char symbol) throws NoNameException {
         super(name, x, y, symbol);
     }
 
@@ -10,7 +10,7 @@ public class Kenga extends Characters {
         character.setName("Дорогой мой");
         System.out.println(this.getName() + " говорила: " + character.setAction("еще раз прыгни"));
     }
-    public void goToWith(Characters character, Place place) throws MismatchCoordinates {
+    public void goToWith(Characters character, Place place) {
         this.move(20,6,true);
         character.move(22,6,true);
         System.out.println(this.getName() + " и " + character.getName() + " пошли в " + place.getName());

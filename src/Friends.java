@@ -9,7 +9,7 @@ public class Friends {//вложенные классы
     }
     public class Piglet extends Characters {
 
-        public Piglet(String name, int x, int y, char symbol) throws NoNameException, MismatchCoordinates {
+        public Piglet(String name, int x, int y, char symbol) throws NoNameException {
             super(name, x, y, symbol);
         }
 
@@ -34,20 +34,20 @@ public class Friends {//вложенные классы
         }
     }
     public class WinnieThePooh extends Characters {
-        public WinnieThePooh(String name, int x, int y, char symbol) throws NoNameException, MismatchCoordinates {
+        public WinnieThePooh(String name, int x, int y, char symbol) throws NoNameException {
             super(name, x, y, symbol);
         }
 
     }
     public class Rabbit extends Characters {
-        public Rabbit(String name, int x, int y, char symbol) throws NoNameException, MismatchCoordinates {
+        public Rabbit(String name, int x, int y, char symbol) throws NoNameException {
             super(name, x, y, symbol);
         }
         public void sayWith(Characters character){
             Speech speech = new Speech();
             System.out.println(this.getName()+" и "+ character.getName() + "сказали:"  + speech.replic1 +" и "+ speech.replic2);
         }
-        public void appearWith(Characters character) throws MismatchCoordinates {
+        public void appearWith(Characters character) {
             this.move(26,6,true);
             character.move(28,6,true);
             System.out.println(this.getName()+" и "+ character.getName() + "появились с другой стороны холма");

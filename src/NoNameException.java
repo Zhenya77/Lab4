@@ -1,4 +1,4 @@
-public class NoNameException extends Throwable {
+public class NoNameException extends RuntimeException {
     public String trouble;
     public NoNameException(String t){
         trouble = t;

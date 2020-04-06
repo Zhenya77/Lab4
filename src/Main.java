@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String args[]) throws NoNameException, MismatchCoordinates {
+    public static void main(String args[]) throws NoNameException {
         try {
             Place.loadLocation();
             //мы указываем координаты поверхностей, иначе объекту тупа не на чем стоять.
@@ -8,9 +8,9 @@ public class Main {
 
 
             Friends.Piglet piglet = friends.new Piglet("Пяточок", 32, 8, 'P');
-            ;
 
-            Kenga kenga = new Kenga("Кенга", 6, 7, 'K'); //четвертый парметр, говорит о том каким символом отмечается объект на карте.
+
+            Kenga kenga = new Kenga("Кенга", 6, 10, 'K'); //четвертый парметр, говорит о том каким символом отмечается объект на карте.
             Roo roo = new Roo("Py", 2, 7, 'R');
 
             Home home = new Home("Дом", CoordsOfPlaces.HOME);
